@@ -28,3 +28,11 @@ class AuthAPI(CustomRequester):
         })
 
         return tokens
+
+    def register_user(self, user_data, expected_status=201):
+        return self.send_request(
+            method="POST",
+            endpoint="/register",
+            data=user_data,
+            expected_status=expected_status
+        )

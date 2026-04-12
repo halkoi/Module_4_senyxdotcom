@@ -1,3 +1,5 @@
+# тут делал задание с метками
+
 from api.api_manager import ApiManager
 from faker import Faker
 import pytest
@@ -7,10 +9,11 @@ fake = Faker()
 
 class TestMoviesPositive:
 
+    @pytest.mark.skip(reason="Временно отключён")
     def test_create_movie(self, super_admin, movie_data):
         response = super_admin.api.movies_api.create_movie(
             movie_data,
-            expected_status=201
+            expected_status=202
         )
         data = response.json()
 
@@ -21,6 +24,9 @@ class TestMoviesPositive:
         assert data["genreId"] == movie_data["genreId"]
         assert data["published"] == movie_data["published"]
 
+    skip_test = True
+
+    @pytest.mark.skipif(skip_test, reason="Тест отключён вручную")
     def test_get_movie_by_id(self,super_admin, created_movie):
         response = super_admin.api.movies_api.get_movie_by_id(
             created_movie["id"]
@@ -39,6 +45,7 @@ class TestMoviesPositive:
         assert isinstance(data["movies"], list)
         assert data["count"] >= 0
 
+    @pytest.mark.xfail(reason="Функция ещё не реализована")
     @pytest.mark.parametrize("params", [
         {"minPrice": 1, "maxPrice": 500},
         {"locations": ["MSK"]},
@@ -48,7 +55,7 @@ class TestMoviesPositive:
         response = super_admin.api.movies_api.get_movies(params=params)
         data = response.json()
 
-        assert response.status_code == 200
+        assert response.status_code == 205
         assert isinstance(data["movies"], list)
 
         for movie in data["movies"]:
@@ -59,6 +66,7 @@ class TestMoviesPositive:
             if "genreId" in params:
                 assert movie["genreId"] == params["genreId"]
 
+    @pytest.mark.usefixtures("super_admin") # тут она должна была работать но какая то хуйня
     def test_get_movies_with_filter(self, super_admin):
         response = super_admin.api.movies_api.get_movies(
             params={"page": 1, "pageSize": 5}

@@ -1,6 +1,7 @@
 from api.movies_api import MoviesAPI
 from api.auth_api import AuthAPI
 from config.hosts import BASE_URL, LOGIN_URL
+from api.user_api import UserAPI
 
 class ApiManager:
 
@@ -8,3 +9,7 @@ class ApiManager:
         self.session = session
         self.movies_api = MoviesAPI(session, BASE_URL)
         self.auth_api = AuthAPI(session, LOGIN_URL)
+        self.user_api = UserAPI(session)
+
+    def close_session(self):
+        self.session.close()
