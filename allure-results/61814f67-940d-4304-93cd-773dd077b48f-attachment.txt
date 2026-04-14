@@ -1,0 +1,1 @@
+{"email":"b4324ba9-8dc1-4e8d-9847-8daf1dcc55f4@test.com","fullName":"Erica Lee","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

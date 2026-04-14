@@ -1,0 +1,1 @@
+{"email":"ce434c7f-2c10-46ae-9e7b-c274166b8f11@test.com","fullName":"David Lewis","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

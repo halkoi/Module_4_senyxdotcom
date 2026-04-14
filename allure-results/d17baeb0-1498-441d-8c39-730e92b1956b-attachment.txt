@@ -1,0 +1,1 @@
+{"email":"1e974ff3-9beb-4f83-876d-742230846be3@test.com","fullName":"Hayley Garrett","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

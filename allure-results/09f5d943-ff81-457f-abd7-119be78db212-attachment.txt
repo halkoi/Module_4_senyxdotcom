@@ -1,0 +1,1 @@
+{"email":"b4f80016-1263-4946-9164-68699a4e4f86@test.com","fullName":"Stephen Choi","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

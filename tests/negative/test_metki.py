@@ -3,7 +3,6 @@
 from api.api_manager import ApiManager
 from faker import Faker
 import pytest
-from tests.conftest import super_admin
 
 fake = Faker()
 

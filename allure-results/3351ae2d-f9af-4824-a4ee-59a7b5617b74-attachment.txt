@@ -1,0 +1,1 @@
+{"email":"886b32b9-a665-456c-ae4e-29cde7ee419d@test.com","fullName":"Brandon Wilson","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

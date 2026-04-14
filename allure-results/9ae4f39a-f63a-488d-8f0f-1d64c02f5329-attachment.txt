@@ -1,0 +1,1 @@
+{"email":"e156a163-97e6-4b1c-b206-6dde2462e6cd@test.com","fullName":"Amy Washington","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

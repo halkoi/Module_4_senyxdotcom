@@ -1,0 +1,1 @@
+{"email":"58fbfcc6-c9c6-4638-a5a8-982a87ee0303@test.com","fullName":"Richard Hernandez","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

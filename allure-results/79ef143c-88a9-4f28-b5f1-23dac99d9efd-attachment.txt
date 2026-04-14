@@ -1,0 +1,1 @@
+{"email":"a8d6b7ff-cfef-4fa4-a2c8-d0ef920d1864@test.com","fullName":"Ricky Peterson","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

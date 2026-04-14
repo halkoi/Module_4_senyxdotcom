@@ -1,0 +1,1 @@
+{"email":"5988ffad-46d1-4f55-be93-925478ebb746@test.com","fullName":"Mark Williams","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

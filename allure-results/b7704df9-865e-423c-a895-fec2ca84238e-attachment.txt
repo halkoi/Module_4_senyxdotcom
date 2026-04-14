@@ -1,0 +1,1 @@
+{"email":"8da30257-4b1f-4677-8526-3748a5539f4a@test.com","fullName":"Austin Robinson","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

@@ -1,0 +1,1 @@
+{"email":"4986741d-dcc3-4a92-96f8-197a1ab82346@test.com","fullName":"Edward Brown","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

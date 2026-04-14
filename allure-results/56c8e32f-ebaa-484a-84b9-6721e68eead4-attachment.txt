@@ -1,0 +1,1 @@
+{"email":"d6ce7f6c-2afb-4ac3-ae71-465f8bdb9a92@test.com","fullName":"John Wilson","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

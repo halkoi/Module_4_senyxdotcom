@@ -1,0 +1,1 @@
+{"email":"af379349-b4f4-4698-9aae-3a0e703fc9a3@test.com","fullName":"Marie Villegas","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

@@ -1,0 +1,1 @@
+{"email":"abd0aa1d-dca5-43a0-a418-383fa657bb8e@test.com","fullName":"Danielle Barnett","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}

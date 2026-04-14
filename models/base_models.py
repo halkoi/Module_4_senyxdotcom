@@ -42,3 +42,20 @@ class RegisterUserResponse(BaseModel):
         except ValueError:
             raise ValueError("Некорректный формат даты и времени. Ожидается формат ISO 8601.")
         return value
+
+
+class MovieResponse(BaseModel):
+    id: int
+    name: str
+    price: int
+    description: Optional[str] = None
+    location: str
+    published: bool
+    genreId: int
+    createdAt: str
+    imageUrl: Optional[str] = None
+
+
+class MoviesListResponse(BaseModel):
+    movies: List[MovieResponse]
+    count: int

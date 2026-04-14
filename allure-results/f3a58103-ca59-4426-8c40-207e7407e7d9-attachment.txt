@@ -1,0 +1,1 @@
+{"email":"4ef976ed-1ce1-4982-b0da-0cc4c42959d2@test.com","fullName":"Tammy Taylor","password":"Test1234","passwordRepeat":"Test1234","roles":["USER"],"verified":true,"banned":false}
