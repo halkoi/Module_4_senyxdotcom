@@ -18,12 +18,12 @@ class DataGenerator:
         return fake.name()
 
     @staticmethod
-    def generate_random_password():
+    def get_default_password():
         return "Test1234"
 
     @staticmethod
     def generate_user():
-        password = DataGenerator.generate_random_password()
+        password = DataGenerator.get_default_password()
         return {
             "email": DataGenerator.generate_random_email(),
             "fullName": DataGenerator.generate_random_name(),
@@ -60,7 +60,7 @@ class DataGenerator:
             'id': f'{uuid4()}',  # генерируем UUID как строку
             'email': DataGenerator.generate_random_email(),
             'full_name': DataGenerator.generate_random_name(),
-            'password': DataGenerator.generate_random_password(),
+            'password': DataGenerator.get_default_password(),
             'created_at': datetime.datetime.now(),
             'updated_at': datetime.datetime.now(),
             'verified': False,
@@ -73,7 +73,7 @@ class DataGenerator:
         return {
             "email": DataGenerator.generate_random_email(),
             "full_name": DataGenerator.generate_random_name(),
-            "password": DataGenerator.generate_random_password(),
+            "password": DataGenerator.get_default_password(),
             "verified": True,
             "banned": False,
             "roles": "USER"

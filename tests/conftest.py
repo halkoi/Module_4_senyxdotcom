@@ -12,7 +12,8 @@ from models.base_models import TestUser
 from sqlalchemy.orm import Session
 from db_requester.db_client import get_db_session
 from db_requester.db_helpers import DBHelper
-
+from models.page_object_models import CinescopeLoginPage
+from playwright.sync_api import sync_playwright
 
 
 fake = Faker(locale='en_US')
@@ -117,7 +118,7 @@ def admin(user_session, super_admin, creation_user_data):
 
 @pytest.fixture
 def test_user() -> TestUser:
-    random_password = DataGenerator.generate_random_password()
+    random_password = DataGenerator.get_default_password()
 
     return TestUser(
         email=DataGenerator.generate_random_email(),
@@ -146,7 +147,7 @@ def creation_user_data():
 
 @pytest.fixture
 def registration_user_data():
-    random_password = DataGenerator.generate_random_password()
+    random_password = DataGenerator.get_default_password()
     return RegistrationUserData(
         email=DataGenerator.generate_random_email(),
         fullName=DataGenerator.generate_random_name(),
@@ -185,3 +186,15 @@ def created_test_user(db_helper):
     # Cleanup после теста
     if db_helper.get_user_by_id(user.id):
         db_helper.delete_user(user)
+
+
+@pytest.fixture(scope="function")
+def logined_test_user_ui(common_user):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=False)
+        page = browser.new_page()
+        login_page = CinescopeLoginPage(page)
+        login_page.open()
+        login_page.login(common_user.email, common_user.password)
+        yield page
+        browser.close()
